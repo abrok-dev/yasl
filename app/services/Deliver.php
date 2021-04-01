@@ -6,7 +6,7 @@ use GuzzleHttp\Client as Client;
 
 class Deliver
 {
-    protected $token = "GzhLmjzZ8R7jI66SN4iO52YN3DH8tmZaac9U5PthAA-r9EmIfQgDYagNUgJrhae0";
+    protected $token = "JwdehjmZSISY_1vHJPOXStyyPH2kkCE_QwUOjKm0dO3r1djpmBFQHqQZ9JYMdwbW";
     protected $header;
     protected Client $client;
 

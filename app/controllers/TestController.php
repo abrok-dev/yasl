@@ -24,7 +24,7 @@ class TestController
    
     public function searchData( $request , Response $response , $query='dragonforce',$page=20)
     {
-        $data = $this->deliver->getLyrics();
+        $data = $this->deliver->searchData();
          $response->getBody()->write($data);
        // $response->getBody()->write("da");
             return $response;

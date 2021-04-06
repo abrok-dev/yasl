@@ -1,0 +1,137 @@
+.block{
+    justify-content: center;
+    
+    flex-direction: row;
+    text-align: center;
+    margin-right: 2%;
+    margin-top: 5px;
+
+}
+.input {
+    width: 90% !important;
+    margin-left: 3%;
+    margin-right: 5px !important;
+}
+.block-input
+{
+    margin-top: 15px;
+    width: 75%;
+}
+.content{
+    text-decoration: none;
+    color:black;
+    font-size: 19px;
+    background-color: coral;
+    padding: 20px;
+}
+input{
+    font-size: 20px  !important;
+    border-width: 3px !important;
+    border-color: rgb(53, 70, 124) !important;
+    border-style: solid !important;
+}
+.block-submit{
+    width: 20%;
+}
+ 
+.main-container{
+    display: flex;
+    justify-content: space-around;
+}
+.cont{
+    margin-top: 100px;
+    
+}
+.submit{
+    margin-right: 2% !important;
+    font-size: 20px !important;
+    height: 50px !important;
+    padding-top: 5px !important;
+    text-decoration: none;
+    color:black;
+    margin-top: 15px;
+    /* padding-right: 8% !important; */
+    /* text-align: center !important; */
+    background-color: #20c997;
+    margin-left: 4%;
+    
+}
+.custom-select{
+    width: 80px !important;
+}
+.search{
+    margin-top: 10%;
+    width: 100%;
+    /* align-items: baseline !important; */
+    flex-direction: row;
+    display:inline-flex;
+}
+.btn{
+    width: 230px;
+    height: 35px;
+    padding-left: 30px ;
+    padding-right: 30px  ;
+    font-weight: 600;
+    padding-top: 5px !important ;
+    
+    padding-bottom: 5px !important ;
+    background-color: #414a53  !important;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+.block-input{
+    display: flex;
+}
+.header{
+    
+    flex-direction: row;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    
+    width: 100%;
+  background-color:#4e5d6c;
+    border-color: rgb(138, 180, 185);
+    justify-content:flex-end;
+}
+@media (max-width: 880px){
+    .header{
+        height: 200px;
+        display: block;
+        flex-direction: column;
+    }
+    .main-container{
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .cont{
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        justify-content: center;
+    }
+    .block {
+        margin-right: 0%;
+        width: 98%;
+    }
+    .btn{
+        width: 90%;
+        margin-left: 5%;
+        
+        display: inline-block;
+        
+    }
+
+   
+}
+body{
+    background-image: url('../img/back.jpg');
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

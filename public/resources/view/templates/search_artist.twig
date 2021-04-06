@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/resources/css/search.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">
+    <title>Поиск</title>
+</head>
+<body>
+    <div class="header secondary">
+
+        <div class="block gray-dark">
+            <a class="btn" href="#">
+                Тексты песен</a>
+        </div>
+        <div class="block ">
+            <a class="btn light" href="#">Исполнители</a>
+        </div>
+        <div class="block  cabinet">
+            <a class="btn" href="#">Личный кабинет</a>
+        </div>
+    </div>
+
+    <div class="main">
+        {# <div class="result">
+            <img  src="https://api.happi.dev/v1/music/cover/8585/artist" class="artist-img" alt="">
+            <a href="#" class=" artist-title">Dragony</a>
+        </div> #}
+        {% for artist in result %}
+        <div class="result">
+        <img src=" {{ artist.cover }} " class="artist-img" alt="resources/img/alt.jpg">  
+        <a href=" 127.0.0.1/artist/{{ artist.id_artist }} " class=" artist-title">{{ artist.artist }}</a>          
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

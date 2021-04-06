@@ -2,8 +2,8 @@
 
 namespace Containers;
 //require __DIR__.'/../../vendor/autoload.php';
-use Controllers\TestController;
-
+use Controllers\SearchController;
+use Controllers\MainPageController;
 use DI\Container;
 
 class Controllers 
@@ -13,8 +13,11 @@ class Controllers
     {
         $this->container = new Container();
 
-        $this->container->set(\TestController::class , function () {
-            return new TestController();
+        $this->container->set(\SearchController::class , function () {
+            return new SearchController();
+        });
+        $this->container->set(\MainPageController::class , function() {
+            return new MainPageController();
         });
 
     }

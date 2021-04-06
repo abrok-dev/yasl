@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Практика</title>
+		<link rel="icon" type="" href="/resources/img/key.svg">
+		<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">
+
+	</head>
+
+	<body>
+
+		<div class="header secondary">
+
+			<div class="block gray-dark">
+				<a class="btn" href="#">
+					Тексты песен</a>
+			</div>
+			<div class="block ">
+				<a class="btn light" href="#">Исполнители</a>
+			</div>
+			<div class="block  cabinet">
+				<a class="btn" href="#">Личный кабинет</a>
+			</div>
+		</div>
+		<div class="search">
+			<div class="block-input">
+				<input type="search" name="search" class="form-control-lg input">
+				<select class="custom-select" name="limit">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+				</select>
+			</div>
+			<div class="block-submit">
+
+				<a href="#" class="submit  btn">
+					Поиск</a>
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="cont">
+
+				<a class="content" href="#">Песня 1 : исполнитель 2 : жанр 3</a>
+			</div>
+
+			<div class="cont">
+
+				<a class="content" href="#">Исполнитель 5 :Жанр 6</a>
+
+			</div>
+		</div>
+        <script  type="text/javascript" stc="/resources/js/jquery-3.6.6.min.js" ></script>
+
+        <script >
+            var input = document.querySelector('.input');
+            var focus=0;
+            input.onFocus = function () {
+                focus = 1;
+            }
+            input.onblur = function () {
+                focus =0;
+            }
+            input.addEventListener('keyup' ,function (e) {
+				if( e.code ==='Enter'){
+					if (focus==1){
+						
+					}
+				}
+			})
+        </script>
+	</body>
+
+</html>

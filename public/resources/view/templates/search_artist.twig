@@ -30,8 +30,8 @@
         </div> #}
         {% for artist in result %}
         <div class="result">
-        <img src=" {{ artist.cover }} " class="artist-img" alt="resources/img/alt.jpg">  
-        <a href=" 127.0.0.1/artist/{{ artist.id_artist }} " class=" artist-title">{{ artist.artist }}</a>          
+     <a href="artist/{{ artist.id_artist }} ">   <img src=" {{ artist.cover }} " class="artist-img" alt="resources/img/alt.jpg">  </a> 
+        <a href="artist/{{ artist.id_artist }} " class=" artist-title">{{ artist.artist }}</a>          
         </div>
         {% endfor %}
     </div>

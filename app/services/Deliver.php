@@ -21,9 +21,9 @@ class Deliver
         ]);
     }
 
-    public function searchData(  $query = 'dragon', $limit = 10 , $lyrics = true , $type = "artist")
+    public function searchData(  $query = 'dragon', $limit = 10 , $type = "artist")
     {
-        $data = $this->client->request('GET', "https://api.happi.dev/v1/music?q=$query&limit=$limit&lyrics=$lyrics&type=$type" );
+        $data = $this->client->request('GET', "https://api.happi.dev/v1/music?q=$query&limit=$limit&lyrics=true&type=$type" );
         // $json =  json_decode($data->getBody());
       
         return $data->getBody()->getContents();
@@ -32,8 +32,8 @@ class Deliver
     public function getAlbumsfromArtist($request, $response, $artist_id)
     {
         $data = $this->client->request('GET', "https://api.happi.dev/v1/music/artists/$artist_id/albums");
-        $response->getBody()->write($data->getBody()->getContents());
-        return $response;
+        
+        return $data->getBody()->getContents();
     }
 
     public function getSongsfromAlbum($request, $response, $artist_id , $album_id)

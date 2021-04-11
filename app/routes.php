@@ -13,11 +13,6 @@ use Twig\Loader\FilesystemLoader;
 return function (App $app){
     $app->get('/' , \MainPageController::class . ':render');
     $app->get('/search' ,\SearchController::class . ':searchData');
-    $app->get('/hello', function (Request $request, Response $response) {
-        
-        $response->getBody()->write("Hello");
-    
-        return $response;
-    });
+    $app->get('/artist/{id_artist}' , \ArtistController::class . ':imageArtistData');
 };
 

@@ -29,8 +29,8 @@
 		</div>
 		<div class="search">
 			<div class="block-input">
-				<input type="search" name="search" class="form-control-lg input">
-				<select class="custom-select" name="limit">
+				<input type="search" name="search" id="search" class="form-control-lg input">
+				<select class="custom-select" id="limit" name="limit">
 					<option value="5">5</option>
 					<option value="10" selected>10</option>
 					<option value="20">20</option>
@@ -59,20 +59,34 @@
         <script  type="text/javascript" stc="/resources/js/jquery-3.6.6.min.js" ></script>
 
         <script >
-            var input = document.querySelector('.input');
-            var focus=0;
+            var input = document.querySelector('#search');
+            var focus =0;
             input.onFocus = function () {
                 focus = 1;
             }
             input.onblur = function () {
                 focus =0;
             }
+			function search(){
+				let textBox = document.querySelector('#search');
+					let	text = textBox.value;
+						let select = document.querySelector('#limit');
+						let n = select.options.selectedIndex;
+						let limit = select.options[n].value;
+
+						window.location.replace("search?q=" + text +"&limit="+limit+"&type=artist");
+			}
             input.addEventListener('keyup' ,function (e) {
 				if( e.code ==='Enter'){
 					if (focus==1){
-						
+						search();
+						//search?q=dragon&limit=10&type=artist
 					}
 				}
+			})
+			var submit = document.querySelector(".submit");
+			submit.addEventListener('click' , function () {
+				search();
 			})
         </script>
 	</body>

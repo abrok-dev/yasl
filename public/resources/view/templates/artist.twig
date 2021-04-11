@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ result.artist }}
+    </title>
+    <link type="text/css" rel="stylesheet" href="/resources/css/artist.css">
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="block-photo">
+        <img src="" class="artist-photo" alt="">
+    </div>
+    <div class="artist-name"> <h3>{{ result.artist }}</h3></div>
+    <div class="main-container">
+<!-- 
+    <div class="block-songs">
+        <div class="song white-text"><a href="#">Песня 8</a></div>
+        <div class="song"> <a href="#">Песня 1 </a> </div>
+        <div class="song"> <a href="#">Песня  2</a> </div>
+        <div class="song"> <a href="#">Песня 3</a> </div>
+        <div class="song"> <a href="#">Песня 4</a> </div>
+        <div class="song"> <a href="#">Песня 5</a> </div>
+        <div class="song"> <a href="#">Песня 6</a> </div>
+
+    </div> -->
+
+    <div class="block-albums">
+
+        {% for album in result.albums %}
+            <div class="album">
+            <a href="artist/{{ result.id_artist }}/album/{{ album.id_album }}" > <img src="{{ album.cover }}" class="img-album" alt=""> </a>
+            <a href="artist/{{ result.id_artist }}/album/{{ album.id_album }}" >{{ album.album }}</a>
+        </div>
+        {% endfor %}
+      
+    </div>
+    </div>
+</body>
+</html>

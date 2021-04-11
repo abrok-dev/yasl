@@ -4,6 +4,7 @@ namespace Containers;
 //require __DIR__.'/../../vendor/autoload.php';
 use Controllers\SearchController;
 use Controllers\MainPageController;
+use Controllers\ArtistController;
 use DI\Container;
 
 class Controllers 
@@ -18,6 +19,9 @@ class Controllers
         });
         $this->container->set(\MainPageController::class , function() {
             return new MainPageController();
+        });
+        $this->container->set(\ArtistController::class , function () {
+            return new ArtistController();
         });
 
     }

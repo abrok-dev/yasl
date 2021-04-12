@@ -14,5 +14,7 @@ return function (App $app){
     $app->get('/' , \MainPageController::class . ':render');
     $app->get('/search' ,\SearchController::class . ':searchData');
     $app->get('/artist/{id_artist}' , \ArtistController::class . ':imageArtistData');
+    $app->get('/artist/{id_artist}/album/{id_album)' , \AlbumController::class . ':album');
+    $app->get('/artist/{id_artist}/album/{id_album)/track/{id_track}' , \SongController::class . ':song');
 };
 

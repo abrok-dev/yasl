@@ -5,6 +5,8 @@ namespace Containers;
 use Controllers\SearchController;
 use Controllers\MainPageController;
 use Controllers\ArtistController;
+use Controllers\AlbumController;
+use Controllers\SongController;
 use DI\Container;
 
 class Controllers 
@@ -20,8 +22,14 @@ class Controllers
         $this->container->set(\MainPageController::class , function() {
             return new MainPageController();
         });
+        $this->container->set(\AlbumController::class , function () {
+            return new AlbumController();
+        });
         $this->container->set(\ArtistController::class , function () {
             return new ArtistController();
+        });
+        $this->container->set(\SongController::class , function () {
+            return new SongController();
         });
 
     }

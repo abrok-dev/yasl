@@ -1,15 +1,14 @@
 <?php
 
 namespace Controllers;
-use Services\DataFromAPI;
+use Models\DataFromAPI;
 use View\BasicView;
 use Psr\Http\Message\ResponseInterface as Response;
-use Services\Deliver;
 
-class ArtistController
+
+class ArtistController extends AbstractDataMusicController
 {
-    public BasicView $view;
-    public Deliver $deliver;
+    
     public function __construct()
     {
         $this->view = new BasicView();

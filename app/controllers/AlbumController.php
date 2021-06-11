@@ -1,11 +1,11 @@
 <?php
 
 namespace Controllers;
-use Services\DataFromAPI;
+use Models\DataFromAPI;
 use View\BasicView;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class AlbumController
+class AlbumController extends AbstractDataMusicController
 {
     public function __construct()
     {

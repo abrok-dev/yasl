@@ -13,7 +13,8 @@
         "illuminate/database": "^8.34",
         "twig/twig": "^3.3",
         "predis/predis": "^1.1",
-        "mongodb/mongodb": "^1.8"
+        "mongodb/mongodb": "^1.8",
+        "gabordemooij/redbean": "^5.7"
         
     },
     "authors": [

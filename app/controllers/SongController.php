@@ -22,6 +22,6 @@ class SongController extends AbstractDataMusicController
         
 
         $response->getBody()->write( $this->view->twig->render('song.twig' , $lyrics));//сделать view
-        
+        return $response;
     }
 }

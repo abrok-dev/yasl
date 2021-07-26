@@ -1,7 +1,6 @@
 <?php
 
 
-require __DIR__.'/start.php';
 use Slim\Factory\AppFactory;
 use Containers\Controllers;
 

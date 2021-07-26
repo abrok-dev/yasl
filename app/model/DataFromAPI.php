@@ -113,7 +113,7 @@ class DataFromAPI
                 $temp = $this->SongsfromAlbum(null,null, $artist_id,$value['id_album']);
                 $temp = json_decode($temp , true);
                 
-                array_push($data,$temp['result']);
+                array_push($data,$temp);
                 
             }
             $collection->insertOne($data);

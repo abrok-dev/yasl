@@ -7,6 +7,7 @@ use Controllers\MainPageController;
 use Controllers\ArtistController;
 use Controllers\AlbumController;
 use Controllers\SongController;
+use Controllers\SongOfArtistController;
 use DI\Container;
 
 class Controllers 
@@ -31,7 +32,11 @@ class Controllers
         $this->container->set(\SongController::class , function () {
             return new SongController();
         });
+        $this->container->set(\SongOfArtistController::class , function(){
+            return new SongOfArtistController();
+        });
 
+        
     }
 
     

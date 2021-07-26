@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/song.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    
     <title>Document</title>
 </head>
 
 <body>
+<!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> -->
     <div class="main-container">
         <div class="block-song">
             <ul class="nav nav-tabs">
@@ -44,6 +46,7 @@
     <div class="down-container">
     </div>
     <script>
+        
         var textList = new Map([
             ['tab_var1', "sometext1"],
             ['tab_var2', "sometext2"],
@@ -67,8 +70,20 @@
         tab2.addEventListener('click', clickTabHandler);
         tab3.addEventListener('click', clickTabHandler);
 
+
+        async function loadSongs(){
+           
+         let songs =  await fetch('/{id_artist}/tracks');
+            
+
+         
+        }
+
         document.addEventListener('DOMContentLoaded', (event) => {
             document.querySelector(".text_song").innerHTML = textList.get('tab_var1');
+
+
+
             // console.log(json.tab_var1);
         });
     </script>
